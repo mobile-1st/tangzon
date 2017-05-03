@@ -1,0 +1,15 @@
+
+<template name="recommendRightCell" >
+
+    <view class="right_cell">
+
+        <view class="content">
+            <text class="fans">{{item.title}}</text>
+            <text class="name">{{item.content}}</text>
+        </view>
+
+        <button data-phone="{{item.content}}" bindtap="btn_clicked" wx:if="{{ item.title === '电话' }}">呼叫</button>
+
+    </view>
+
+</template>

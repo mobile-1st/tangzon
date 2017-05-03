@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/start/index",
+    "pages/index/index",
+    "pages/service/index",
+    "pages/goods/detail/index",
+    "pages/detail/detail",
+    "pages/safe/index",
+    "pages/mall/index",
+    "pages/agent/index",
+    "pages/about/index",
+    "pages/login/index",
+    "pages/user/index",
+    "pages/create/create",
+    "pages/comment/index",
+    "pages/recommend/recommend"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#2382D2",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "2107",
+    "backgroundColor": "#f8f8f8",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh":"true"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#479de6",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "assets/images/iconfont-home.png",
+      "selectedIconPath": "assets/images/iconfont-home-active.png",
+      "text": "首页"
+    },{
+      "pagePath": "pages/create/create",
+      "iconPath": "assets/images/iconfont-user.png",
+      "selectedIconPath": "assets/images/iconfont-user-active.png",
+      "text": "创造"
+    }, {
+      "pagePath": "pages/user/index",
+      "iconPath": "assets/images/iconfont-discuss.png",
+      "selectedIconPath": "assets/images/iconfont-discuss-active.png",
+      "text": "我的"
+    }]
+  },
+  "debug": false
+}

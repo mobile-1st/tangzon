@@ -1,0 +1,19 @@
+<import src="../common/topic-list.wxml"/>
+
+<view class="page">
+    <view class="main-func">
+        <view class="weui-grids non-border">
+            <block wx:for-items="{{grids}}" wx:key="{{index}}">
+                <navigator url="{{item.path}}?id={{index}}" class="weui-grid non-border item" data-path="{{ item.path }}" data-id="{{ index }}">
+                    <image class="weui-grid__icon item-avatar" src="../../assets/images/home/{{item.imageName}}" />
+                    <view class="weui-grid__label item-text">{{item.text}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+
+
+    <view class="page__bd">
+        <template is="topic-list" data="{{ postsList }}"/>
+    </view>
+</view>

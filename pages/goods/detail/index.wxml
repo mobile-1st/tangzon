@@ -1,0 +1,40 @@
+<view class="container">
+    <swiper class="swiper_box" indicator-dots="{{ indicatorDots }}" vertical="{{ vertical }}"
+            autoplay="{{ autoplay }}" interval="{{ interval }}" duration="{{ duration }}">
+        <block wx:for="{{ goods.item.images }}" wx:key="">
+            <swiper-item>
+                <image src="{{ item.path }}" class="slide-image" data-index="{{ index }}" bindtap="previewImage" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="shopping_container">
+        <view class="name">{{ goods.item.name }}</view>
+        <view class="price">¥ {{ goods.item.price }}</view>
+        <text class="remark">{{ goods.item.remark }}</text>
+    </view>
+
+    <view class="weui-flex">
+        <view class="weui-flex__item"><view class="placeholder">床</view></view>
+        <view class="weui-flex__item"><view class="placeholder">WIFI</view></view>
+        <view class="weui-flex__item"><view class="placeholder">厨房</view></view>
+        <view class="weui-flex__item"><view class="placeholder">热水器</view></view>
+    </view>
+    <view class="weui-flex">
+        <view class="weui-flex__item"><view class="placeholder">电视</view></view>
+        <view class="weui-flex__item"><view class="placeholder">洗衣机</view></view>
+        <view class="weui-flex__item"><view class="placeholder">冰箱</view></view>
+        <view class="weui-flex__item"><view class="placeholder">空调</view></view>
+    </view>
+    <view class="weui-flex">
+        <view><view class="placeholder">桌子3张</view></view>
+        <view class="weui-flex__item"><view class="placeholder">柜子3个</view></view>
+        <view><view class="placeholder">凳子5个</view></view>
+    </view>
+
+    <view class="empty"></view>
+
+    <view class="btn-plus" bindtap="estateAgent">
+        <image class="icon" src="../../../assets/images/iconfont-kefu.png" />
+        <text>御用经纪人</text>
+    </view>
+</view>

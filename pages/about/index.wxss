@@ -1,0 +1,4 @@
+.link {
+	color: #479de6;
+	text-decoration: underline;
+}
