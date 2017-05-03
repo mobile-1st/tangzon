@@ -1,4 +1,6 @@
 {
   "navigationBarBackgroundColor": "#2382D2",
-  "navigationBarTitleText": "汤逊湖社区"
+  "navigationBarTitleText": "汤逊湖社区",
+  "enablePullDownRefresh": true
+
 }

@@ -32,6 +32,7 @@ Page({
             "params_string": '{"mdrender":false}',
             "url": "https://bbs.sunzhongmou.com/api/v1/topic/" + this.data.topicId
         }).then(res => {
+            wx.stopPullDownRefresh()
             console.log(res);
             res.data.create_at = util.getDateDiff(new Date(res.data.create_at));
             res.data.replies = res.data.replies.map(function (item) {
@@ -61,6 +62,7 @@ Page({
         })
     },
     onPullDownRefresh() {
+        wx.stopPullDownRefresh()
         console.info('onPullDownRefresh')
         this.fetchData()
     },

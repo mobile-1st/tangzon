@@ -32,6 +32,7 @@ Page({
     onShow() {
     },
     onPullDownRefresh() {
+        wx.stopPullDownRefresh()
         console.info('onPullDownRefresh')
         this.setData({
             postsList: [],
@@ -83,6 +84,7 @@ Page({
             "url": "https://bbs.sunzhongmou.com/api/v1/topics"
         }).then(res => {
             console.log(res)
+            wx.stopPullDownRefresh()
             self.setData({
                 postsList: self.data.postsList.concat(res.data.map(function (item) {
                     item.last_reply_at = util.getDateDiff(new Date(item.last_reply_at));
