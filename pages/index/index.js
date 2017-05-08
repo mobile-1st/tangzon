@@ -26,21 +26,22 @@ Page({
     },
     onLoad() {
         this.posts = App.HttpResource('/bbs/event/get/:id', {id: '@id'})
+        console.info('onLoad')
         this.fetchData()
         this.getAccessToken()
     },
     onShow() {
     },
     onPullDownRefresh() {
-        wx.stopPullDownRefresh()
         console.info('onPullDownRefresh')
         this.setData({
-            postsList: [],
-            page: 1
+            page: 1,
+            postsList: []
         })
         this.fetchData()
     },
     onReachBottom() {
+        console.info('onReachBottom')
         this.fetchData()
     },
     getAssets() {
@@ -66,10 +67,7 @@ Page({
     },
     fetchData: function () {
         var self = this;
-        self.setData({
-            hidden: false
-        });
-        if (this.page === 1) {
+        if (self.data.page === 1) {
             self.setData({
                 postsList: []
             });
@@ -90,7 +88,8 @@ Page({
                     item.last_reply_at = util.getDateDiff(new Date(item.last_reply_at));
                     return item;
                 })),
-                page: (self.data.page + 1)
+                page: (self.data.page + 1),
+                hidden: false
             })
         })
     },

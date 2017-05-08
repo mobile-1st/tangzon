@@ -1,5 +1,6 @@
 {
-	"navigationBarBackgroundColor": "#41d3cb",
-    "navigationBarTitleText": "欢迎您的到来",
+	"navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "欢迎您",
+    "backgroundColor": "#000",
     "disableScroll": "true"
 }
